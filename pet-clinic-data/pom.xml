@@ -10,7 +10,7 @@
 	
 	<groupId>guru.springframework</groupId>
 	<artifactId>pet-clinic-data</artifactId>
-	<version>0.0.2</version>
+	<version>0.0.2-SNAPSHOT</version>
 	<name>pet-clinic-data</name>
 	<description>Demo project for Spring Boot</description>
 
@@ -78,6 +78,6 @@
 
 
   <scm>
-    <tag>pet-clinic-data-0.0.2</tag>
+    <tag>Test 03</tag>
   </scm>
 </project>

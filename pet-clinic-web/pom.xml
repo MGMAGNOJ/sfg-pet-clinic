@@ -5,13 +5,13 @@
 	<parent>
 		<groupId>guru.springframework</groupId>
 		<artifactId>sfg-pet-clinic</artifactId>
-		<version>0.0.2-SNAPSHOT</version>
+		<version>0.0.2</version>
 	</parent>
 	
 	<groupId>guru.springframework</groupId>
 	<artifactId>pet-clinic-web</artifactId>
 	<packaging>pom</packaging>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.2</version>
 	<name>pet-clinic-web</name>
 	<description>Demo project for Spring Boot</description>
 

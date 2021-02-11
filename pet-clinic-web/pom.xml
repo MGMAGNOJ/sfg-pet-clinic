@@ -10,7 +10,6 @@
 	
 	<groupId>guru.springframework</groupId>
 	<artifactId>pet-clinic-web</artifactId>
-	<packaging>pom</packaging>
 	<version>0.0.4-SNAPSHOT</version>
 	<name>pet-clinic-web</name>
 	<description>Demo project for Spring Boot</description>

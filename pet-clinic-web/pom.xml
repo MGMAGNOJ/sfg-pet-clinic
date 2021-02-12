@@ -3,20 +3,22 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<parent>
-		<groupId>guru.springframework</groupId>
 		<artifactId>sfg-pet-clinic</artifactId>
+		<groupId>guru.springframework</groupId>
 		<version>0.0.4-SNAPSHOT</version>
 	</parent>
 	
-	<groupId>guru.springframework</groupId>
 	<artifactId>pet-clinic-web</artifactId>
 	<version>0.0.4-SNAPSHOT</version>
-	<name>pet-clinic-web</name>
-	<description>Demo project for Spring Boot</description>
 
-	<properties>
-		<java.version>11</java.version>
-	</properties>
+    <properties>
+        <!-- Web dependencies -->
+        <webjars-bootstrap.version>3.3.6</webjars-bootstrap.version>
+        <webjars-jquery-ui.version>1.11.4</webjars-jquery-ui.version>
+        <webjars-jquery.version>2.2.4</webjars-jquery.version>
+        <wro4j.version>1.8.0</wro4j.version>
+    </properties>
+	
 
 	<dependencies>
 

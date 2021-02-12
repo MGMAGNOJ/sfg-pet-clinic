@@ -12,36 +12,30 @@ import guru.springframework.sfgpetclinic.services.map.OwnerServiceMap;
 import guru.springframework.sfgpetclinic.services.map.VetServiceMap;
 
 @Component
-public class DataLoader implements CommandLineRunner{
-    
+public class DataLoader implements CommandLineRunner {
+
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader () {
+    public DataLoader() {
 
         ownerService = new OwnerServiceMap();
         vetService = new VetServiceMap();
-        };
-
     }
 
-
     @Override
-    public void run (String... args) throws Exception {
+    public void run(String... args) throws Exception {
 
-        ownerService = new OwnerServiceMap(); 
+        ownerService = new OwnerServiceMap();
         vetService = new VetServiceMap();
-        
 
         Owner owner1 = new Owner();
         owner1.setFirstName("Michael");
         owner1.setLastName("Weston");
 
-
         Pet mikesPet = new Pet();
 
         mikesPet.setOwner(owner1);
-
 
         ownerService.save(owner1);
 
@@ -49,10 +43,8 @@ public class DataLoader implements CommandLineRunner{
         owner2.setFirstName("Fiona");
         owner2.setLastName("Glenanne");
 
-
         Pet fionasCat = new Pet();
         fionasCat.setOwner(owner2);
-
 
         ownerService.save(owner2);
 
@@ -60,13 +52,11 @@ public class DataLoader implements CommandLineRunner{
         vet1.setFirstName("Sam");
         vet1.setLastName("Axe");
 
-
         vetService.save(vet1);
 
         Vet vet2 = new Vet();
         vet2.setFirstName("Jessie");
         vet2.setLastName("Porter");
-
 
         vetService.save(vet2);
     }

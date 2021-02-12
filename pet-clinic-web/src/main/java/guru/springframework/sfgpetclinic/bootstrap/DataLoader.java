@@ -8,18 +8,18 @@ import guru.springframework.sfgpetclinic.model.Pet;
 import guru.springframework.sfgpetclinic.model.Vet;
 import guru.springframework.sfgpetclinic.services.OwnerService;
 import guru.springframework.sfgpetclinic.services.VetService;
-import guru.springframework.sfgpetclinic.services.map.OwnerServiceMap;
-import guru.springframework.sfgpetclinic.services.map.VetServiceMap;
+
+
 @Component
 public class DataLoader implements CommandLineRunner {
 
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
+    public DataLoader(OwnerService ownerService, VetService vetService) {
 
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
+        this.ownerService = ownerService;
+        this.vetService = vetService;
     }
 
     @Override

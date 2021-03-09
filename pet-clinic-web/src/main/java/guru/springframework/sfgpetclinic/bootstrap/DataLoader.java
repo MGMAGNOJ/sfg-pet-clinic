@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 import guru.springframework.sfgpetclinic.model.Owner;
 import guru.springframework.sfgpetclinic.model.Pet;
 import guru.springframework.sfgpetclinic.model.PetType;
-import guru.springframework.sfgpetclinic.model.Specialty;
+import guru.springframework.sfgpetclinic.model.Speciality;
 import guru.springframework.sfgpetclinic.model.Vet;
 import guru.springframework.sfgpetclinic.services.OwnerService;
 import guru.springframework.sfgpetclinic.services.PetService;
@@ -54,15 +54,15 @@ public class DataLoader implements CommandLineRunner {
 
         i = (long) 0;
 
-        Specialty radio = new Specialty();
+        Speciality radio = new Speciality();
         radio.setDescription("Radiologia");
-        Specialty savedRadioSpecialty = specialtiesService.save(radio);        
-        Specialty orto = new Specialty();
+        Speciality savedRadioSpecialty = specialtiesService.save(radio);        
+        Speciality orto = new Speciality();
         orto.setDescription("Ortopedia");
-        Specialty savedOrto = specialtiesService.save(orto);
-        Specialty pedi = new Specialty();
+        Speciality savedOrto = specialtiesService.save(orto);
+        Speciality pedi = new Speciality();
         pedi.setDescription("Pediatria");
-        Specialty SavedPedi = specialtiesService.save(pedi);
+        Speciality SavedPedi = specialtiesService.save(pedi);
 
         System.out.println("Loaded Specialties: " + i);
 

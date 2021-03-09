@@ -3,10 +3,6 @@ package guru.springframework.sfgpetclinic.model;
 import javax.persistence.Column;
 import javax.persistence.MappedSuperclass;
 
-import org.hibernate.annotations.CollectionId;
-
-import jdk.jfr.Name;
-
 @MappedSuperclass
 public class Person extends BaseEntity{
  

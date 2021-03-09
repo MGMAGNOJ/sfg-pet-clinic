@@ -4,7 +4,7 @@ import java.util.Set;
 
 import org.springframework.stereotype.Service;
 
-import guru.springframework.sfgpetclinic.model.Specialty;
+import guru.springframework.sfgpetclinic.model.Speciality;
 import guru.springframework.sfgpetclinic.model.Vet;
 import guru.springframework.sfgpetclinic.services.SpecialtiesService;
 import guru.springframework.sfgpetclinic.services.VetService;
@@ -34,7 +34,7 @@ public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetS
         if (object.getSpecialties().isEmpty()){
                 object.getSpecialties().forEach(specialty -> {
                     if (specialty.getId() ==null) {
-                        Specialty savedSpecialty = specialtiesService.save(specialty);
+                        Speciality savedSpecialty = specialtiesService.save(specialty);
                         specialty.setId(savedSpecialty.getId());
                     }
                 });

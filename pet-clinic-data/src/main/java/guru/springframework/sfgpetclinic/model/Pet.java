@@ -16,6 +16,11 @@ import javax.persistence.Table;
 @Table(name = "pets")
 public class Pet extends BaseEntity {
 
+    /**
+     *
+     */
+    private static final long serialVersionUID = 9034331366538233688L;
+
     @Column(name = "nome")
     private String nome;
     

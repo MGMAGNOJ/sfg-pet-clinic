@@ -8,6 +8,10 @@ import javax.persistence.Table;
 @Table(name = "types")
 public class PetType extends BaseEntity{
 
+    /**
+     *
+     */
+    private static final long serialVersionUID = -3916053990363115879L;
     @Column(name = "name")
     private String name;
 

@@ -12,6 +12,10 @@ import javax.persistence.Table;
 @Table(name = "visits")
 public class Visit extends BaseEntity{
 
+    /**
+     *
+     */
+    private static final long serialVersionUID = -3322844006787339576L;
     @Column(name = "date")
     private LocalDate date;
     @Column(name = "description")

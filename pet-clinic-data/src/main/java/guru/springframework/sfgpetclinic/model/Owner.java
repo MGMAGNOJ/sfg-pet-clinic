@@ -13,6 +13,10 @@ import javax.persistence.Table;
 @Table(name = "owners")
 public class Owner extends Person {
 
+    /**
+     *
+     */
+    private static final long serialVersionUID = 7063907480297074262L;
     @Column(name = "address")
     private String address;
     @Column(name = "city")

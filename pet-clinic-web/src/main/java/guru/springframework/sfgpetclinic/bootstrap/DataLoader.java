@@ -115,7 +115,7 @@ public class DataLoader implements CommandLineRunner {
         catVisit.setDescription("TESTE de Visita");
         catVisit.setDate(LocalDate.now());
 
-        System.out.println("Loaded SAveVisit: " + i);
+        System.out.println("Loaded SaveVisit: " + i);
 
         visitService.save(catVisit);
 

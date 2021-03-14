@@ -12,6 +12,7 @@ import guru.springframework.sfgpetclinic.model.Speciality;
 import guru.springframework.sfgpetclinic.model.Vet;
 import guru.springframework.sfgpetclinic.model.Visit;
 import guru.springframework.sfgpetclinic.services.OwnerService;
+import guru.springframework.sfgpetclinic.services.PetService;
 import guru.springframework.sfgpetclinic.services.PetTypeService;
 import guru.springframework.sfgpetclinic.services.SpecialtiesService;
 import guru.springframework.sfgpetclinic.services.VetService;
@@ -22,13 +23,17 @@ public class DataLoader implements CommandLineRunner {
 
     private final OwnerService ownerService;
     private final VetService vetService;
+    private final PetService petService;
     private final PetTypeService petTypeService;
     private final SpecialtiesService specialtiesService;
     private final VisitService visitService;
 
-    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialtiesService specialtiesService, VisitService visitService) {
+
+
+    public DataLoader(OwnerService ownerService, VetService vetService, PetService petService, PetTypeService petTypeService, SpecialtiesService specialtiesService, VisitService visitService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
+        this.petService = petService;
         this.petTypeService = petTypeService;
         this.specialtiesService = specialtiesService;
         this.visitService = visitService;
@@ -117,7 +122,7 @@ public class DataLoader implements CommandLineRunner {
 
         System.out.println("Loaded SaveVisit: " + i);
 
-        visitService.save(catVisit);
+        
 
         i = (long) 0;
         
@@ -137,6 +142,11 @@ public class DataLoader implements CommandLineRunner {
         vet2.getSpecialties().add(savedRadioSpecialty);
         System.out.println("Loaded Vets...."+ i);
         vetService.save(vet2);
+
+        //petService.save(mikesPet);
+        petService.save(fionasCat);
+        
+        visitService.save(catVisit);
     
     }
 

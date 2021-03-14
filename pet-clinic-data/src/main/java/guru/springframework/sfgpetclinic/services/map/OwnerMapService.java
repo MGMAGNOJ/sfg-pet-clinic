@@ -1,6 +1,5 @@
 package guru.springframework.sfgpetclinic.services.map;
 
-import java.time.Period;
 import java.util.Set;
 
 import org.springframework.context.annotation.Profile;
@@ -14,12 +13,12 @@ import guru.springframework.sfgpetclinic.services.PetTypeService;
 
 @Service
 @Profile("default")
-public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
+public class OwnerMapService extends AbstractMapService<Owner, Long> implements OwnerService {
 
     private final PetTypeService petTypeService;
     private final PetService petService;
 
-    public OwnerServiceMap(PetTypeService petTypeService, PetService petService) {
+    public OwnerMapService(PetTypeService petTypeService, PetService petService) {
         this.petTypeService = petTypeService;
         this.petService = petService;
     }

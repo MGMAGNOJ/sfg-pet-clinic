@@ -19,6 +19,7 @@ import guru.springframework.sfgpetclinic.services.OwnerService;
 public class OwnerSDJpaService implements OwnerService{
 
     private final OwnerRepository ownerRepository;
+
     public OwnerSDJpaService(OwnerRepository ownerRepository, PetRepository petRepository, PetTypeRepository petTypeRepository) {
         this.ownerRepository = ownerRepository;
     }
@@ -37,7 +38,9 @@ public class OwnerSDJpaService implements OwnerService{
 
     @Override
     public Owner findById(Long id) {
+
         return ownerRepository.findById(id).orElse(null);
+
     }
 
     @Override
